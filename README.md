@@ -49,7 +49,8 @@ This part is not required. If you're done with the required functionality, it's 
 - The screens should be styled (we're using Tailwind in our team).
 
 ### 📥 Submission
-1. Push your code to a Github repository.
+1. Fork the repository
+1. Create a pull request with your changes.
 2. Add a simple README with:
     - How to install and run it.
     - Any notes about your approach.
