@@ -1,4 +1,11 @@
 {
+  "users": [{
+    "id": 1,
+    "email": "admin@example.com",
+    "password": "12345",
+    "username": "User",
+    "role": "Admin"
+  }],
   "submission": [{
     "tenant": {
         "name": "Acme Corporation",
