@@ -9,6 +9,7 @@ import Users from '../svg/Users';
 import Settings from '../svg/Settings';
 import SidebarLink from './SidebarLink';
 import CollapseButton from './CollapseButton';
+import Logo from '../svg/Logo';
 
 export default function Sidebar() {
     const [isCollapsed, setIsCollapsed] = useState(false);
@@ -20,9 +21,7 @@ export default function Sidebar() {
     return <>
         <aside className={`flex flex-col min-h-screen bg-[#EBEBEB]/30 border-r border-r-[#DEDEDE] overflow-hidden w-56 transition-all duration-300 ${isCollapsed ? 'max-w-17' : ''}`}>
             <NavLink to="/" className="flex items-center gap-2 p-4 border-b border-b-[#DEDEDE] text-[16px] font-semibold">
-                <span className="bg-[#0056A4] rounded-lg flex items-center justify-center h-8 w-8">
-                    <img className="h-4 w-4" src="logo.svg" alt="logo" />
-                </span>
+                <span className="bg-[#0056A4] rounded-lg flex items-center justify-center p-2"><Logo /></span>
                 {isCollapsed ? '' : 'FinanceHub'}
             </NavLink>
             <ul className={`flex gap-1 flex-col p-2 ${isCollapsed ? 'hidden' : ''}`}>
