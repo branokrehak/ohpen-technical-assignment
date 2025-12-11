@@ -11,6 +11,8 @@ export default function Login() {
 
     return <>
         <section className="login">
+            {/* temp */}
+            <button className="text-4xl" onClick={handleSubmit}>login</button>
         </section>
     </>;
 }

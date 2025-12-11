@@ -17,11 +17,11 @@ export const useLogin = () => {
         onSuccess: ({ user, rememberUser }) => {
             if (rememberUser) {
                 // save user to local storage
-                localStorage.setItem('token', 'test-token');
+                localStorage.setItem('token', 'user-token');
                 localStorage.setItem('user', JSON.stringify(user));
             } else {
                 // save user to session storage
-                sessionStorage.setItem('token', 'test-token');
+                sessionStorage.setItem('token', 'user-token');
                 sessionStorage.setItem('user', JSON.stringify(user));
             }
 

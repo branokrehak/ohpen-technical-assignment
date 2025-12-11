@@ -1,11 +1,11 @@
 import React, { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import { MantineProvider } from '@mantine/core';
 import { RouterProvider } from 'react-router-dom';
 import { router } from './routes';
-import './styles/index.scss';
+import './styles/index.css';
 
 const queryClient = new QueryClient();
 
