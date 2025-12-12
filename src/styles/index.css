@@ -22,7 +22,7 @@ html, body {
 body {
   min-height: 100vh;
   color: var(--color-0B0B0B);
-  background-color: var(--color-white2);
+  background-color: white;
 }
 
 ul {

@@ -20,21 +20,23 @@ export default function Sidebar() {
     }
 
     return <>
-        <aside className={`flex flex-col min-h-screen bg-grey2/30 border-r border-r-white3 overflow-hidden w-56 transition-all duration-300 ${isCollapsed ? 'max-w-17' : ''}`}>
-            <NavLink to="/" className="flex items-center gap-2 px-4 h-16 border-b border-b-white3 text-[16px] font-semibold">
-                <span className="bg-blue1 rounded-lg flex items-center justify-center p-2"><Logo /></span>
-                {isCollapsed ? '' : 'FinanceHub'}
-            </NavLink>
-            <ul className={`flex gap-1 flex-col p-2 ${isCollapsed ? 'hidden' : ''}`}>
-                <li><SidebarLink to="/" label="Dashboard" Icon={Dashboard}></SidebarLink></li>
-                <li><SidebarLink to="/onboarding" label="Onboarding" Icon={Bank}></SidebarLink></li>
-                <li><SidebarLink to="/tenants" label="Tenants" Icon={Tenants}></SidebarLink></li>
-                <li><SidebarLink to="/labels" label="Labels" Icon={Labels}></SidebarLink></li>
-                <li><SidebarLink to="/organizations" label="Organizations" Icon={Organizations}></SidebarLink></li>
-                <li><SidebarLink to="/users" label="Users" Icon={Users}></SidebarLink></li>
-                <li><SidebarLink to="/settings" label="Settings" Icon={Settings}></SidebarLink></li>
-            </ul>
-            <CollapseButton onClick={handleSidebarCollapse} isCollapsed={isCollapsed} />
+        <aside className="bg-white4/30">
+            <div className={`flex flex-col min-h-screen border-r border-r-white3 overflow-hidden w-56 transition-all duration-300 ${isCollapsed ? 'max-w-17' : ''}`}>
+                <NavLink to="/" className="flex items-center gap-2 px-4 h-16 border-b border-b-white3 text-[16px] font-semibold">
+                    <span className="bg-blue1 rounded-lg flex items-center justify-center p-2"><Logo /></span>
+                    {isCollapsed ? '' : 'FinanceHub'}
+                </NavLink>
+                <ul className={`flex gap-1 flex-col p-2 ${isCollapsed ? 'hidden' : ''}`}>
+                    <li><SidebarLink to="/" label="Dashboard" Icon={Dashboard}></SidebarLink></li>
+                    <li><SidebarLink to="/onboarding" label="Onboarding" Icon={Bank}></SidebarLink></li>
+                    <li><SidebarLink to="/tenants" label="Tenants" Icon={Tenants}></SidebarLink></li>
+                    <li><SidebarLink to="/labels" label="Labels" Icon={Labels}></SidebarLink></li>
+                    <li><SidebarLink to="/organizations" label="Organizations" Icon={Organizations}></SidebarLink></li>
+                    <li><SidebarLink to="/users" label="Users" Icon={Users}></SidebarLink></li>
+                    <li><SidebarLink to="/settings" label="Settings" Icon={Settings}></SidebarLink></li>
+                </ul>
+                <CollapseButton onClick={handleSidebarCollapse} isCollapsed={isCollapsed} />
+            </div>
         </aside>
     </>;
 }

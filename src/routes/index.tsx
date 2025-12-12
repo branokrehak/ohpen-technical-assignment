@@ -22,12 +22,12 @@ function ProtectedRoute() {
 export const router = createBrowserRouter(
     createRoutesFromElements(<>
         <Route path="login" element={<Login />} />
+        <Route path="onboarding" element={<Onboarding />} />
 
         {/* requires login */}
         <Route element={<ProtectedRoute />}>
             <Route path="/" element={<Layout />}>
                 <Route index element={<Home />} />
-                <Route path="onboarding" element={<Onboarding />} />
                 <Route path="labels" element={<Labels />} />
                 <Route path="organizations" element={<Organizations />} />
                 <Route path="settings" element={<Settings />} />
