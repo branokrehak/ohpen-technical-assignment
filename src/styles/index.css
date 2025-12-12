@@ -21,7 +21,8 @@ html, body {
 
 body {
   min-height: 100vh;
-  color: #0B0B0B;
+  color: var(--color-0B0B0B);
+  background-color: var(--color-white2);
 }
 
 ul {

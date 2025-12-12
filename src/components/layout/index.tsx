@@ -2,12 +2,16 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 
 import Sidebar from './Sidebar';
+import Header from './Header';
 
 export default function Layout() {
     return <>
-        <main className="layout">
+        <main className="flex flex-row">
             <Sidebar />
-            <Outlet />
+            <div className="flex flex-col w-full">
+                <Header />
+                <Outlet />
+            </div>
         </main>
     </>;
 }
