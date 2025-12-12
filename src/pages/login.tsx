@@ -8,7 +8,7 @@ import LoginForm from '../components/pages/login/LoginForm';
 import TwoFactorForm from '../components/pages/login/TwoFactorForm';
 
 export default function Login() {
-    const [currentStep, setCurrentStep] = useState<'login' | '2fa'>('2fa');
+    const [currentStep, setCurrentStep] = useState<'login' | '2fa'>('login');
     const [user, setUser] = useState();
     const navigate = useNavigate();
 
