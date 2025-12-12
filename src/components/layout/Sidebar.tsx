@@ -19,9 +19,9 @@ export default function Sidebar() {
     }
 
     return <>
-        <aside className={`flex flex-col min-h-screen bg-[#EBEBEB]/30 border-r border-r-[#DEDEDE] overflow-hidden w-56 transition-all duration-300 ${isCollapsed ? 'max-w-17' : ''}`}>
-            <NavLink to="/" className="flex items-center gap-2 p-4 border-b border-b-[#DEDEDE] text-[16px] font-semibold">
-                <span className="bg-[#0056A4] rounded-lg flex items-center justify-center p-2"><Logo /></span>
+        <aside className={`flex flex-col min-h-screen bg-grey2/30 border-r border-r-white3 overflow-hidden w-56 transition-all duration-300 ${isCollapsed ? 'max-w-17' : ''}`}>
+            <NavLink to="/" className="flex items-center gap-2 p-4 border-b border-b-white3 text-[16px] font-semibold">
+                <span className="bg-blue1 rounded-lg flex items-center justify-center p-2"><Logo /></span>
                 {isCollapsed ? '' : 'FinanceHub'}
             </NavLink>
             <ul className={`flex gap-1 flex-col p-2 ${isCollapsed ? 'hidden' : ''}`}>

@@ -50,11 +50,12 @@ This part is not required. If you're done with the required functionality, it's 
 
 ### 📥 Submission
 1. Fork the repository
-1. Create a pull request with your changes.
-2. Add a simple README with:
+2. Leave the fork network (in your forked repository: *Settings* -> *General* -> Scroll down to *Leave fork network* -> Accept all popups)
+3. Create a pull request with your changes.
+4. Add a simple README with:
     - How to install and run it.
     - Any notes about your approach.
-3. Send us the link (if your repository is private, please add `@mbednarik-ohpen` and `@denis-rahl-ohpen` as collaborators).
+5. Send us the link (if your repository is private, please add `@mbednarik-ohpen` and `@denis-rahl-ohpen` as collaborators).
 
 That's it! Keep it simple and if you have any questions, please don't hesitate to reach out.
 

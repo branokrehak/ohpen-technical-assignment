@@ -4,7 +4,7 @@ import { IoEyeOutline } from 'react-icons/io5';
 
 import type { FormInputProps } from '../@types';
 import Alert from './svg/Alert';
-import CheckMark from './svg/Checkmark';
+import CheckMark from './svg/CheckMark';
 
 export default function FormInput<T extends object, P extends object = {}>(props: FormInputProps<T, P>) {
     const hasIcon = !!props.Icon;
@@ -14,20 +14,16 @@ export default function FormInput<T extends object, P extends object = {}>(props
     const [showPassword, setShowPassword] = useState(false);
     const [isFocused, setIsFocused] = useState(false);
 
-    useEffect(() => {
-        console.log(isFocused);
-    }, [isFocused]);
-
     return <>
         <label className="flex flex-col gap-1">
-            <span className={`text-[14px] font-semibold ${isError ? 'text-[#CC272E]' : ''}`}>{props.label} {props.required && <span className="text-[#CC272E] ml-1.5">*</span>}</span>
+            <span className={`text-[14px] font-semibold ${isError ? 'text-red1' : ''}`}>{props.label} {props.required && <span className="text-red1 ml-1.5">*</span>}</span>
             <span className="h-9 relative">
                 <input className={`
                     bg-white/20 rounded-md border w-full h-9
-                    focus:outline-none focus:border-[#0056A4]
+                    focus:outline-none focus:border-blue1
                     ${isPasswordInput ? 'pr-10' : 'pr-3'}
                     ${hasIcon ? 'pl-10' : 'pl-3'}
-                    ${isError ? 'border-[#CC272E]' : isValid ? 'border-[#008B52]' : 'border-[#F2F2F2]'}
+                    ${isError ? 'border-red1' : isValid ? 'border-green1' : 'border-white1'}
                     ${isFocused && isValid ? 'shadow-[0_0_0_4px_#008F4A]' : 'shadow-xs'}
                 `}
                     {...props.form.getInputProps(props.name)}
@@ -50,7 +46,7 @@ export default function FormInput<T extends object, P extends object = {}>(props
                 )}
             </span>
         </label>
-        {isError && <span className="mt-2 flex items-center text-[12px] text-[#CC272E] leading-4 gap-1"><Alert /> {props.form.errors[props.name]}</span>}
-        {isValid && <span className="mt-2 flex items-center text-[12px] text-[#008B52] leading-4 gap-1"><CheckMark color="#008B52" /> Valid</span>}
+        {isError && <span className="mt-2 flex items-center text-[12px] text-red1 leading-4 gap-1"><Alert /> {props.form.errors[props.name]}</span>}
+        {isValid && <span className="mt-2 flex items-center text-[12px] text-green1 leading-4 gap-1"><CheckMark color="#008B52" /> Valid</span>}
     </>;
 }

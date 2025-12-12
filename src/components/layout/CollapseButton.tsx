@@ -6,7 +6,7 @@ export default function CollapseButton({ onClick, isCollapsed }: { onClick: () =
     const [isHovered, setIsHovered] = useState(false);
 
     return <>
-        <button onClick={onClick} className="flex items-center justify-center mt-auto border-t w-full cursor-pointer border-t-[#DEDEDE] h-[50px] transition-all duration-300 hover:bg-[#0056A4]/10" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+        <button onClick={onClick} className="flex items-center justify-center mt-auto border-t w-full cursor-pointer border-t-white3 h-12.5 transition-all duration-300 hover:bg-blue1/10" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
             <span className={`transition-all duration-300 ${isCollapsed ? 'rotate-180' : ''}`}><Arrow1 color={isHovered ? '#0056A4' : '#636363'} /></span>
         </button>
     </>;

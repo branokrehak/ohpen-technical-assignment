@@ -25,7 +25,7 @@ export const useLogin = () => {
                 sessionStorage.setItem('user', JSON.stringify(user));
             }
 
-            navigate('/'); // redirect to protected route
+            navigate('/');
         },
-    });
+    }).mutate;
 }
